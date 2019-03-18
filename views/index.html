@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>node express</title>
+    <link rel="stylesheet" href="/public/bootstrap/bootstrap.css">
+  </head>
+  <body>
+    <a href="/add" class="btn btn-primary">增加留言</a>
+    <table class="table table-condensed">
+      <thead>
+        <td>id</td>
+        <td>留言</td>
+        <td>留言内容</td>
+      </thead>
+      <tbody>
+        {{each liuyan}}
+        <tr>
+          <td>
+            {{$value.id}}
+          </td>
+          <td>
+            {{$value.name}}
+          </td>
+          <td>
+            {{$value.content}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>
