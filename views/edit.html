@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="/public/bootstrap/bootstrap.css">
   </head>
   <body>
-    <form action="/addLiuyan" method="get">
+    <form action="/post" method="post">
+			 <input type="text" class="form-control" name="id" id="id" value="{{liuyan.id}}" hidden="hidden">
       <div class="form-group">
         <label for="name">姓名</label>
-        <input type="text" class="form-control" name="name" id="name" placeholder="输入姓名" required="required">
+        <input type="text" class="form-control" name="name" id="name" value="{{liuyan.name}}" placeholder="输入姓名" required="required">
       </div>
       <div class="form-group">
         <label for="liuyan">留言内容</label>
-        <input type="text" class="form-control" name="liuyan" id="liuyan" placeholder="留言内容" required="required">
+        <input type="text" class="form-control" name="content" id="content" value="{{liuyan.content}}" placeholder="留言内容" required="required">
       </div>
       <button type="submit" class="btn btn-success">提交</button>
     </form>

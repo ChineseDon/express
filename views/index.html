@@ -12,6 +12,7 @@
         <td>id</td>
         <td>留言</td>
         <td>留言内容</td>
+				<td>操作</td>
       </thead>
       <tbody>
         {{each liuyan}}
@@ -25,6 +26,10 @@
           <td>
             {{$value.content}}
           </td>
+					<td>
+						<a href="/delete/{{ $value.id }}" class="btn btn-primary">删除</a>
+						<a href="/edit/{{$value.id}}" class="btn btn-danger">编辑</a>
+					</td>
         </tr>
         {{/each}}
       </tbody>
